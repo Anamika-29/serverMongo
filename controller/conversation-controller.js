@@ -2,7 +2,6 @@ import Conversation  from "../modal/Conversation.js";
 
 
 export const newConversation = async (request, response) => {
-    console.log(request.ip)
     let senderId = request.body.senderId;
     let receiverId = request.body.receiverId;
 
