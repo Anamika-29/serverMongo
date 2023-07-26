@@ -1,7 +1,7 @@
 import grid from 'gridfs-stream';
 import mongoose from 'mongoose';
 
-const url = 'https://react-demo-48821.web.app';
+const url = 'http://localhost:8000';
 
 
 let gfs, gridfsBucket;
@@ -18,7 +18,7 @@ conn.once('open', () => {
 export const uploadImage = (request, response) => {
     if(!request.file) 
         return response.status(404).json("File not found");
-    console.log(request.file);
+    
     const imageUrl = `${url}/file/${request.file.filename}`;
 
     response.status(200).json(imageUrl);    
