@@ -1,7 +1,7 @@
 import grid from 'gridfs-stream';
 import mongoose from 'mongoose';
 
-const url = 'http://localhost:8000';
+const url = 'https://react-demo-48821.web.app';
 
 
 let gfs, gridfsBucket;
