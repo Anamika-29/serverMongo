@@ -19,7 +19,8 @@ export const newConversation = async (request, response) => {
         const savedConversation = await newConversation.save();
         return response.status(200).json(savedConversation);
     } catch (error) {
-        return response.status(500).json(error);
+        return response.status(500).json(error.message
+            );
     }
 
 }
