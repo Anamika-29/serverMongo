@@ -9,7 +9,7 @@ export const newMessage = async (request, response) => {
         await Conversation.findByIdAndUpdate(request.body.conversationId, { message: request.body.text });
         return response.status(200).json("Message has been sent successfully");
     } catch (error) {
-        return response.status(500).json(error);
+        return response.status(500).json(error.message);
     }
 
 }
